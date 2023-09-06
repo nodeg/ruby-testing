@@ -27,4 +27,7 @@ ruby tests/hello_test.rb
 
 ## Behavior-driven development (BDD)
 
-TODO
+WIP!
+
+The idea behind BDD is built on top of TDD, with the difference of writing tests as a
+specification of the behavior of a system instead of just testing the code.
