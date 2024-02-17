@@ -27,7 +27,31 @@ ruby tests/hello_test.rb
 
 ## Behavior-driven development (BDD)
 
-WIP!
 
 The idea behind BDD is built on top of TDD, with the difference of writing tests as a
 specification of the behavior of a system instead of just testing the code.
+
+### Initialize Cucumber
+
+Before you start with Cucumber, you need to initializes the folder structure and
+generate conventional files. This was already done here and you only need it when
+you start a fresh project.
+
+### Executing the test
+
+* Go inside the `bdd` folder
+* Execute the test with
+
+```bash
+# execute all tests
+cucumber
+
+# execute one specific test
+cucumber features/calculator.feature
+cucumber features/hello.feature
+```
+
+* Watch the test fail
+* Open the feature and fix the expectations
+* Run the test again
+
