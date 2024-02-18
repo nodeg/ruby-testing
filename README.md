@@ -1,3 +1,6 @@
+[![Tests](https://github.com/nodeg/ruby-testing/actions/workflows/tests.yml/badge.svg)](https://github.com/nodeg/ruby-testing/actions/workflows/tests.yml)
+[![RuboCop](https://github.com/nodeg/ruby-testing/actions/workflows/rubocop.yml/badge.svg)](https://github.com/nodeg/ruby-testing/actions/workflows/rubocop.yml)
+
 # Testing using Ruby and Cucumber
 
 These are some very basic examples on how TDD and BDD work in Ruby.
