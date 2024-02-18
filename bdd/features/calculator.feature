@@ -6,4 +6,4 @@ Feature: Simple calculator
   Scenario: Add two numbers
     Given I enter 1 and 2 into the calculator
     When I want to add them
-    Then the result should be 4
+    Then the result should be 3

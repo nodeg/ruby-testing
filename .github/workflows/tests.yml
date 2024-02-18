@@ -1,0 +1,27 @@
+name: Tests
+on: [pull_request]
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        # Due to https://github.com/actions/runner/issues/849, we have to use quotes for '3.0'
+        ruby: ['3.3', head]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: Install Cucumber and Rspec
+      run: gem install cucumber rspec
+    - name: Get Cucumber version
+      run: cucumber --version
+    - name: Get Rspec version
+      run: rspec -v
+    - name: Run TDD tests
+      run: ruby tdd/tests/hello_test.rb
+    - name: Run BDD tests
+      run: cd bdd && cucumber

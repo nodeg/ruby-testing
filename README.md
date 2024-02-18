@@ -21,12 +21,9 @@ These are some very basic examples on how TDD and BDD work in Ruby.
 ruby tests/hello_test.rb
 ```
 
-* Watch the test failing
-* Open `hello.rb` and enable the code
-* Run the test again
+The test explicitly does not fail because of the CI tests.
 
 ## Behavior-driven development (BDD)
-
 
 The idea behind BDD is built on top of TDD, with the difference of writing tests as a
 specification of the behavior of a system instead of just testing the code.
@@ -37,7 +34,7 @@ Before you start with Cucumber, you need to initializes the folder structure and
 generate conventional files. This was already done here and you only need it when
 you start a fresh project.
 
-### Executing the test
+### Executing the BDD tests
 
 * Go inside the `bdd` folder
 * Execute the test with
@@ -50,8 +47,3 @@ cucumber
 cucumber features/calculator.feature
 cucumber features/hello.feature
 ```
-
-* Watch the test fail
-* Open the feature and fix the expectations
-* Run the test again
-

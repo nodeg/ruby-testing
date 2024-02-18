@@ -2,7 +2,7 @@
 
 # Simple HelloWorld class
 class HelloWorld
-  # def greet(name)
-  #   @greetings = "Hello, #{name}!"
-  # end
+  def greet(name)
+    @greetings = "Hello, #{name}!"
+  end
 end
