@@ -1,0 +1,18 @@
+name: RuboCop
+on: [pull_request]
+jobs:
+  Rubocop:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: Install RuboCop
+      run: gem install rubocop
+    - name: Get RuboCop version
+      run: rubocop -v
+    - name: RuboCop linting
+      run: rubocop
+      
