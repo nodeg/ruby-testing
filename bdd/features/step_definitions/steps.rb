@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rspec'
+
 Given(/^I am (polite|not polite)$/) do |value|
   raise ScriptError unless value == 'polite'
 end
